@@ -1,0 +1,19 @@
+<div *ngIf="!peliculas">
+  <img src="../assets/img/Loading_icon.gif"/>
+</div>
+<div *ngIf="peliculas.length === 0">
+  <p>No hay peliculas para mostrar</p>
+</div>
+<div *ngIf="peliculas">
+  <div *ngFor="let pelicula of peliculas; let index = index" [ngClass]="'pelicula-contenedor'">
+    <div>
+      <h4>{{index+1}}. Pelicula: <span>{{pelicula.titulo | uppercase}}</span></h4>
+    </div>
+    <div>
+      <h4>Fecha de estreno: {{pelicula.fechaEstreno | date: 'dd/MMMM/yyyy' | uppercase}}</h4>
+    </div>
+    <div>
+      <h4>Precio: {{pelicula.precio | currency}}</h4>
+    </div>
+  </div>
+</div>
