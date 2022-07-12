@@ -1,7 +1,4 @@
-<!-- <input type="file" style="display: none;" #cargador>
-<button (click)="cargador.click()">Cargar archivo</button>
- -->
-<h2>Cartelera</h2>
-<app-listado-peliculas [peliculas]="peliculasEnCines"></app-listado-peliculas>
-<h2>Futuros estrenos</h2>
-<app-listado-peliculas [peliculas]="peliculasEstrenos"></app-listado-peliculas>
+<app-menu></app-menu>
+<div class="contenedor">
+  <router-outlet></router-outlet>
+</div>
