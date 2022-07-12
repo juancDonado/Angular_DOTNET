@@ -12,29 +12,25 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
 
-    setTimeout(()=>{
-      this.peliculasEnCines = [
-        {
-        titulo: 'Spider-man',
+    this.peliculasEnCines = [
+      {
+      titulo: 'Spider-man',
+      fechaEstreno: new Date(),
+      precio: 14.99
+      },
+      {
+        titulo: 'Moana',
         fechaEstreno: new Date(),
-        precio: 14.99
-        },
-        {
-          titulo: 'Moana',
-          fechaEstreno: new Date(),
-          precio: 11.99
-        }
-      ];
-    }, 2000);
-    setTimeout(()=>{
-      this.peliculasEstrenos = [
-        {
-          titulo: 'spider-man no way home',
-          fechaEstreno: new Date(),
-          precio: 22.99
-        }
-      ];
-    }, 2500);
+        precio: 11.99
+      }
+    ];
+    this.peliculasEstrenos = [
+      /* {
+        titulo: 'spider-man no way home',
+        fechaEstreno: new Date(),
+        precio: 22.99
+      } */
+    ];
   }
 
   duplicarNumero(n:number):number{
