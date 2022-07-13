@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { primeraLetraMayuscula } from 'src/app/utilidades/validadores/primeraLetraMayuscula';
+import { generoCreacionDTO } from '../genero';
 
 @Component({
   selector: 'app-crear-genero',
@@ -12,9 +15,13 @@ export class CrearGeneroComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  guardarCambios():void{
+
+  
+  guardarCambios(genero:generoCreacionDTO):void{
     //... Aqui se guardan los cambios con el API
+    console.log(genero);
     this.router.navigate(['/generos']);
   }
+  
 
 }

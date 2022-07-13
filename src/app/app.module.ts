@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms'
+
+
 import { AppComponent } from './app.component';
 import { ListadoPeliculasComponent } from './peliculas/listado-peliculas/listado-peliculas.component';
 import { ListadoGenericoComponent } from './utilidades/listado-generico/listado-generico.component';
@@ -17,6 +20,14 @@ import { CrearActorComponent } from './actores/crear-actor/crear-actor.component
 import { CrearPeliculaComponent } from './peliculas/crear-pelicula/crear-pelicula.component';
 import { CrearCineComponent } from './cines/crear-cine/crear-cine.component';
 import { IndiceCinesComponent } from './cines/indice-cines/indice-cines.component';
+import { EditarActorComponent } from './actores/editar-actor/editar-actor.component';
+import { EditarGeneroComponent } from './generos/editar-genero/editar-genero.component';
+import { EditarCineComponent } from './cines/editar-cine/editar-cine.component';
+import { EditarPeliculaComponent } from './peliculas/editar-pelicula/editar-pelicula.component';
+import { FormularioGeneroComponent } from './generos/formulario-genero/formulario-genero.component';
+import { FiltroPeliculaComponent } from './peliculas/filtro-pelicula/filtro-pelicula.component';
+import { FormularioActoresComponent } from './actores/formulario-actores/formulario-actores.component';
+import { InputImgComponent } from './utilidades/input-img/input-img.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +43,22 @@ import { IndiceCinesComponent } from './cines/indice-cines/indice-cines.componen
     CrearActorComponent,
     CrearPeliculaComponent,
     CrearCineComponent,
-    IndiceCinesComponent
+    IndiceCinesComponent,
+    EditarActorComponent,
+    EditarGeneroComponent,
+    EditarCineComponent,
+    EditarPeliculaComponent,
+    FormularioGeneroComponent,
+    FiltroPeliculaComponent,
+    FormularioActoresComponent,
+    InputImgComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
