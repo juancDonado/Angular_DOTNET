@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  public peliculasEnCines:Array<any>;
-  public peliculasEstrenos:Array<any>;
-  public title:string;
-  public ocultar:boolean = false;
+  peliculasEnCines:Array<any>;
+  peliculasEstrenos:Array<any>;
+  title:string;
+  ocultar:boolean = false;
 
   constructor() { }
 

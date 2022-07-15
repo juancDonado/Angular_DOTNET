@@ -10,14 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FiltroPeliculaComponent implements OnInit {
 
-  public form:FormGroup;
-  public generos:Array<any> = [
+  form:FormGroup;
+  generos:Array<any> = [
     { id: 1, nombre: 'Drama'},
     { id: 2, nombre: 'Comedia'},
     { id: 3, nombre: 'Ciencia ficcion'},
     { id: 4, nombre: 'Terror'}
   ];
-  public peliculas:Array<any> = [
+  peliculas:Array<any> = [
     {
       titulo: 'Spiderman',
       enCines: false,
@@ -41,8 +41,8 @@ export class FiltroPeliculaComponent implements OnInit {
     }
   ]; 
 
-  public peliculasOriginal = this.peliculas;
-  public formOriginal = {
+  peliculasOriginal = this.peliculas;
+  formOriginal = {
     titulo: '',
     generoId: 0,
     proximosEstrenos: false,
@@ -123,7 +123,7 @@ export class FiltroPeliculaComponent implements OnInit {
     }
   }
 
-  public limpiar(){
+  limpiar(){
     this.form.patchValue(this.formOriginal);
   }
 }

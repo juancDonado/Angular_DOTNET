@@ -9,7 +9,7 @@ import { generoCreacionDTO } from '../genero';
 })
 export class EditarGeneroComponent implements OnInit {
 
-  public modelo:generoCreacionDTO = {nombre:'Drama'};
+  modelo:generoCreacionDTO = {nombre:'Drama'};
 
   constructor(private activatedRoute:ActivatedRoute, private router:Router) { }
 

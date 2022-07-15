@@ -11,9 +11,9 @@ export class RatingComponent implements OnInit {
   @Input() ratingSeleccionado: number = 0;
   @Output() rated:EventEmitter<number> = new EventEmitter<number>();
 
-  public maxRatingArray:Array<number> = [];
-  public votado:boolean = false;
-  public ratingAnterior: number;
+  maxRatingArray:Array<number> = [];
+  votado:boolean = false;
+  ratingAnterior: number;
 
   constructor() { }
 
@@ -21,11 +21,11 @@ export class RatingComponent implements OnInit {
     this.maxRatingArray = Array(this.maxRating).fill(0);
   }
 
-  public manejarMouseEnter(index:number):void{
+  manejarMouseEnter(index:number):void{
     this.ratingSeleccionado = index + 1;
   }
 
-  public manejarMouseLeave():void{
+  manejarMouseLeave():void{
     if(this.ratingAnterior !== 0){
       this.ratingSeleccionado = this.ratingAnterior;
     }else{
@@ -33,7 +33,7 @@ export class RatingComponent implements OnInit {
     }
   }
 
-  public rate(index:number):void{
+  rate(index:number):void{
     this.ratingSeleccionado = index + 1;
     this.votado = true;
     this.ratingAnterior = this.ratingSeleccionado;

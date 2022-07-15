@@ -1,0 +1,10 @@
+mat-form-field{
+  width: 100%;
+  
+}
+textarea{
+  height: 300px;
+}
+mat-tab-group{
+  margin: 30px 0px;
+}

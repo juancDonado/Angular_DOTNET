@@ -12,7 +12,7 @@ export class EditarActorComponent implements OnInit, OnDestroy {
   modelo:actorDTO = {
     nombre:'Juan', 
     fechaNacimiento: new Date(),
-    foto: 'https://img.huffingtonpost.com/asset/61caf8022100001cf5702819.jpg?cache=cdMDvfgL2C&ops=crop_677_406_4305_2564%2Cscalefit_720_noupscale'
+    foto: 'https://i.pinimg.com/736x/ef/c6/23/efc623194c8f17ac5d7507fbb197e554.jpg'
   };
 
   constructor(private activatedRoute:ActivatedRoute) { }
