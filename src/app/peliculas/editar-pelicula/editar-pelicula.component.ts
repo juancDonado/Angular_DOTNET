@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PeliculaCreacionDTO } from '../pelicula';
+import { PeliculaDTO } from '../pelicula';
 
 @Component({
   selector: 'app-editar-pelicula',
@@ -9,12 +9,13 @@ import { PeliculaCreacionDTO } from '../pelicula';
 })
 export class EditarPeliculaComponent implements OnInit {
 
-  modelo:PeliculaCreacionDTO = {
+  modelo:PeliculaDTO = {
     titulo: 'Iron man 2',
     trailer: 'abc',
     resumen: 'Pelicula gg',
     enCines: true,
-    fechaLanzamiento: new Date()
+    fechaLanzamiento: new Date(),
+    poster: 'https://es.web.img3.acsta.net/medias/nmedia/18/84/50/16/20084857.jpg'
   }
 
   constructor(private activatedRoute:ActivatedRoute) { }

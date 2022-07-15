@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PeliculaCreacionDTO } from '../pelicula';
-
+0
 @Component({
   selector: 'app-crear-pelicula',
   templateUrl: './crear-pelicula.component.html',

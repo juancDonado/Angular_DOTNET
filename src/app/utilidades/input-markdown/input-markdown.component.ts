@@ -9,7 +9,7 @@ export class InputMarkdownComponent implements OnInit {
 
   @Output() changeMarkDown:EventEmitter<string> = new EventEmitter<string>()
   @Input() contenidoMarkDown:string = '';
-  @Input() placeHolderTextArea:string = 'textoi'
+  @Input() placeHolderTextArea:string = 'texto';
 
   constructor() { }
 

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { PeliculaCreacionDTO } from '../pelicula';
+import { PeliculaCreacionDTO, PeliculaDTO } from '../pelicula';
 
 @Component({
   selector: 'app-formulario-pelicula',
@@ -10,7 +10,7 @@ import { PeliculaCreacionDTO } from '../pelicula';
 export class FormularioPeliculaComponent implements OnInit {
 
   @Output() OnSubmit:EventEmitter<PeliculaCreacionDTO> = new EventEmitter<PeliculaCreacionDTO>();
-  @Input() modelo:PeliculaCreacionDTO;
+  @Input() modelo:PeliculaDTO;
   
   form:FormGroup;
 
@@ -36,8 +36,11 @@ export class FormularioPeliculaComponent implements OnInit {
     this.OnSubmit.emit(this.form.value);
   }
 
-  changeMarkDown(event:any){
-
+  changeMarkDown(texto:string){
+    this.form.get('biografia').setValue(texto);
   }
 
+  archivoSeleccionado(archivo:File) {
+    this.form.get('poster').setValue(archivo);
+  }
 }

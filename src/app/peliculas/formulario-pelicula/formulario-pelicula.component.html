@@ -24,7 +24,10 @@
   </mat-form-field>
 
   <h4>Seleccionar poster</h4>
-  <app-input-img></app-input-img>
+  <app-input-img 
+    [urlImagenActual]="modelo?.poster" 
+    (archivoSeleccionado)="archivoSeleccionado($event)"
+  ></app-input-img>
 
   <h4>Resumen de la pelicula</h4>
   <app-input-markdown
