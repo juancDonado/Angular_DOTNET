@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { MarkdownModule } from 'ngx-markdown';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet'
 
@@ -33,6 +33,8 @@ import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdo
 import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine.component';
 import { MapasComponent } from './utilidades/mapas/mapas.component';
 import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/formulario-pelicula.component';
+import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component';
+import { AutocompleteActoresComponent } from './actores/autocomplete-actores/autocomplete-actores.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/for
     InputMarkdownComponent,
     FormularioCineComponent,
     MapasComponent,
-    FormularioPeliculaComponent
+    FormularioPeliculaComponent,
+    SelectorMultipleComponent,
+    AutocompleteActoresComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +72,7 @@ import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/for
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
+    FormsModule,
     LeafletModule,
     MarkdownModule.forRoot()
   ],

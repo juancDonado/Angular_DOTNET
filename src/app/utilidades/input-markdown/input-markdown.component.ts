@@ -15,9 +15,4 @@ export class InputMarkdownComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  inputTextArea(texto:string){
-    this.contenidoMarkDown = texto;
-    this.changeMarkDown.emit(texto)
-  }
 }

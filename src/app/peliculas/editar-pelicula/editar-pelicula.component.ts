@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PeliculaDTO } from '../pelicula';
+import { PeliculaCreacionDTO, PeliculaDTO } from '../pelicula';
 
 @Component({
   selector: 'app-editar-pelicula',
@@ -24,6 +24,10 @@ export class EditarPeliculaComponent implements OnInit {
     this.activatedRoute.params.subscribe(param => {
       console.log('pelicula ', param.id)
     });
+  }
+
+  guardarCambios(pelicula:PeliculaCreacionDTO){
+    console.log(pelicula)
   }
 
 }

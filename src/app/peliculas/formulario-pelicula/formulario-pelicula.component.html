@@ -29,6 +29,21 @@
     (archivoSeleccionado)="archivoSeleccionado($event)"
   ></app-input-img>
 
+  <h4>Seleccione los generos</h4>
+  <app-selector-multiple 
+  [seleccionados]="generosSeleccinados"
+  [noSeleccionados]="generosNoSeleccionados"
+  ></app-selector-multiple>
+
+  <h4>Seleccione los cines</h4>
+  <app-selector-multiple 
+  [seleccionados]="cinesSeleccionados"
+  [noSeleccionados]="cinesNoSeleccinados"
+  ></app-selector-multiple>
+
+  <h4>Seleccione los actores</h4>
+  <app-autocomplete-actores></app-autocomplete-actores>
+
   <h4>Resumen de la pelicula</h4>
   <app-input-markdown
     [contenidoMarkDown]="modelo?.resumen"
